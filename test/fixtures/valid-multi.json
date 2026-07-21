@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "fs": { "command": "npx", "args": ["-y", "server-fs"] },
+    "db": { "url": "http://localhost:8080/mcp", "type": "sse" },
+    "search": { "command": "python", "args": ["search.py"], "env": { "API_KEY": "${API_KEY}" } }
+  }
+}

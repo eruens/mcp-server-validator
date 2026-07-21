@@ -1,0 +1,21 @@
+{
+  "name": "mcp-server-validator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "GitHub Action to validate MCP server configurations",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "lint": "eslint src/ test/"
+  },
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "@actions/glob": "^0.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

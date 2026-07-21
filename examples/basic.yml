@@ -1,0 +1,15 @@
+name: Validate MCP Configs
+on:
+  push:
+    paths: ['**.mcp.json']
+  pull_request:
+    paths: ['**.mcp.json']
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: eruens/mcp-server-validator@v1
+        with:
+          config-path: '**/.mcp.json'
+          strict: 'true'

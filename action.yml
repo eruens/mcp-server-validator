@@ -1,0 +1,22 @@
+name: 'MCP Server Validator'
+description: 'Validate MCP server configuration files against the Model Context Protocol specification'
+author: 'eruens'
+branding:
+  icon: 'check-circle'
+  color: 'green'
+inputs:
+  config-path:
+    description: 'Glob pattern(s) pointing to MCP configuration files'
+    default: '**/.mcp.json'
+    required: false
+  strict:
+    description: 'When true, warnings become errors and missing optional fields fail validation'
+    default: 'false'
+    required: false
+  schema-version:
+    description: 'MCP spec version to validate against (2024-11-05 or 2025-03-26)'
+    default: '2025-03-26'
+    required: false
+runs:
+  using: 'node20'
+  main: 'index.js'
